@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+
+<head>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="JavaScript.js"></script>
+    <title></title>
+    <meta charset="utf-8" />
+
+</head>
+<body>
+    <div ng-controller="myController">
+
+        <ul>
+            <li ng-repeat="country in countries">
+                {{country.name}}- index = {{$index}}
+                <ul>
+                    <li ng-repeat="city in country.cities">
+                        {{city.name}}- parent index = {{$parent.$index}},index ={{$index}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!--<div>
+            FirstName: <input type="text" ng-model="employee.firstname" />
+        </div>
+        <div>
+            LastName: <input type="text" ng-model="employee.lastname" />
+        </div>
+        <div>
+            Gender:  <input type="text" ng-model="employee.gender" />
+        </div>
+        <div>
+            Country: <input type="text" ng-model="employee.country" />
+        </div>-->
+        <!--<table>
+            <thead>
+                <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Gender</th>
+                <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td>{{employee.firstname}}</td>
+                    <td>{{employee.lastname}}</td>
+                    <td>{{employee.gender}}</td>
+                    <td>{{employee.country}}</td>
+                </tr>
+            </tbody>
+        </table>-->
+        <!--<div>
+            FirstName : {{employee.firstname}}
+        </div>
+        <div>
+            LastName : {{employee.lastname}}
+        </div>
+        <div>
+            Gender : {{employee.gender}}
+        </div>
+        <div>
+            country:{{employee.country}}
+        </div>-->
+        <!--<div>
+            <img ng-src={{employee.flag}}
+                 alt= {{employee.country}}
+            style=height=100px, width="200px" />
+        </div>-->
+        
+    </div>
+    
+    
+</body>
+
+</html>
